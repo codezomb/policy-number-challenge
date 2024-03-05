@@ -1,0 +1,12 @@
+name: rspec
+
+on: ["push"]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build -t policy-number:$GITHUB_SHA .
+    - name: Run rspec
+      run: docker run --rm policy-number:$GITHUB_SHA bundle exec rspec
