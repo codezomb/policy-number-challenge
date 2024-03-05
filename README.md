@@ -1,7 +1,7 @@
 ## Policy OCR Development Test
 
 ### Setup
-All dependencies are handled via Docker. If you don't want to install Docker, you can runt he code with Ruby 3.1.
+All dependencies are handled via Docker. If you don't want to install Docker, you can run the code with Ruby 3.1.
 To get started build the docker image. This will install the gems, and copy the code to the docker image.
 
 ```shell
